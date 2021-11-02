@@ -24,6 +24,12 @@ pipeline {
                 bat "mvn package "
             }
         }
+
+           stage('---sonar---') {
+            steps {
+                bat "mvn sonar:sonar "
+            }
+        }
      
     }
 }
