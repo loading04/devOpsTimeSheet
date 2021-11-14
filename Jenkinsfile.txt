@@ -42,11 +42,7 @@ pipeline {
                 bat "echo '********' ";
                 bat "eho ${group}";
 
-                bat "mvn clean deploy:deploy-file -DgroupId= ${group}
-                    -DartifactId= ${artifact} -Dversion= ${version} -DgeneratePom=true
-                    -Dpackaging= ${packaging} -DrepositoryId=deploymentRepo
-                    -Durl=http://localhost:8081/repository/maven-releases/
-                    -Dfile=target/*.${packaging}"
+                
             }
      
     }
