@@ -34,7 +34,13 @@ pipeline {
 
         stage('---deploy nexus---')
             steps{
-                pom = readMavenPom file: "pom.xml"
+                pom = readMavenPom file: "pom.xml";
+                group=pom.groupId;
+                artifact=pom.artifactId;
+                version=pom.version;
+                packaging=pom.packaging;
+                bat "echo '********' ";
+                bat "eho ${group}";
 
                 bat "mvn clean deploy:deploy-file -DgroupId= ${pom.groupId}
                     -DartifactId= ${pom.artifactId} -Dversion= ${pom.version} -DgeneratePom=true
