@@ -33,6 +33,7 @@ pipeline {
         }
 
         stage('---deploy nexus---')
+        {
             steps{
                 pom = readMavenPom file: "pom.xml"
                 group=pom.groupId
