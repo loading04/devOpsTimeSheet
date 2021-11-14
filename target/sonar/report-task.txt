@@ -2,5 +2,5 @@ projectKey=tn.spring:timesheet
 serverUrl=http://localhost:9000
 serverVersion=6.7.7.38951
 dashboardUrl=http://localhost:9000/dashboard/index/tn.spring:timesheet
-ceTaskId=AX0ecp42R3CuKMb_ITBd
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AX0ecp42R3CuKMb_ITBd
+ceTaskId=AX0ekc_15eAB1BEQ0Bq3
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX0ekc_15eAB1BEQ0Bq3
