@@ -21,18 +21,16 @@ pipeline {
 
            stage('---package---') {
             steps {
-                bat "mvn package "
+                bat "mvn package"
             }
         }
 
            stage('---sonar---') {
             steps {
-                bat "mvn sonar:sonar "
+                bat "mvn sonar:sonar"
             }
               stage('---deploy artifact to Nexus---') {
-   when {
-    branch 'master'
-   }
+ 
    steps {
     script {
      unstash 'pom'
