@@ -4,30 +4,30 @@ pipeline {
     stages {
         stage('---clean---') {
             steps {
-                mvn clean
+               sh "mvn clean"
             }
         }
         stage('---test---') {
             steps {
-                bat "mvn test"
+                sh "mvn test"
             }
         }
       
         stage('---install---') {
             steps {
-                bat "mvn install"
+                sh "mvn install"
             }
         }
 
            stage('---package---') {
             steps {
-                bat "mvn package "
+                sh "mvn package "
             }
         }
 
            stage('---sonar---') {
             steps {
-                bat "mvn sonar:sonar "
+                sh "mvn sonar:sonar "
             }
             
         }
