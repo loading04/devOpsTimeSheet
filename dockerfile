@@ -21,7 +21,4 @@ COPY settings-docker.xml /usr/share/maven/ref/
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
 CMD ["mvn"]
 
-FROM openjdk:8-jdk-alpine
-COPY target/*.jar app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
-EXPOSE 9001
+
