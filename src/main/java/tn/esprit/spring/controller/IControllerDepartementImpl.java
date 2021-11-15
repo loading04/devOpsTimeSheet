@@ -14,35 +14,24 @@ public class IControllerDepartementImpl {
 	@Autowired
 	IDepartementService idepartementservice;
 	
-	public int ajouterDepartement(Departement departement)
-	{
-		idepartementservice.ajouterDepartement(departement);
-		return departement.getId();
+	
+	
+	
+	public void affecterDepartementAEntreprise(int depId, int entrepriseId) {
+		idepartementservice.affecterDepartementAEntreprise(depId, entrepriseId);
+	}
+
+	
+	public int ajouterDepartement(Departement dep) {
+		return idepartementservice.ajouterDepartement(dep);
 	}
 	
-	public void mettreAjourNameDepartementId(String name, int departementId)
-	{
-		idepartementservice.mettreAjourNameDepartementId(name, departementId);
+	public List<String> getAllDepartementsNamesByEntreprise(int entrepriseId) {
+		return idepartementservice.getAllDepartementsNamesByEntreprise(entrepriseId);
 	}
-	
-	public void deleteDepartementById(int departementId)
-	{
-		idepartementservice.deleteDepartementById(departementId);
+
+	public void deleteDepartementById(int depId) {
+		idepartementservice.deleteDepartementById(depId);
+
 	}
-	
-	public int getNombreDepartementJPQL()
-	{
-		return idepartementservice.getNombreDepartementJPQL();
-	}
-	
-	public List<String> getAllDepartementNamesJPQL()
-	{
-		return idepartementservice.getAllDepartementNamesJPQL();
-	}
-	
-	public List<Departement> getAllDepartements()
-	{
-		return idepartementservice.getAllDepartements();
-	}
-	
 }
