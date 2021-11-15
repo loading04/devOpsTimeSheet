@@ -6,6 +6,7 @@ pipeline {
       steps {
         // Get some code from a GitHub repository
         git 'https://github.com/yosriksonti/timeSheetDevOps.git'
+        sh 'git pull origin yosri-spring'
         // Run Maven on a Unix agent.
         sh "mvn -Dmaven.test.failure.ignore=true clean package"
       }
