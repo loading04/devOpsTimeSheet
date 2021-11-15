@@ -1,20 +1,37 @@
 pipeline {
-agent any
-  stages {
-    stage("build") {
-      steps {
-        echo 'building the application...'
-      }
+    agent any
+    
+    stages {
+        stage('---clean---') {
+            steps {
+                bat "mvn clean"
+            }
+        }
+        stage('---test---') {
+            steps {
+                bat "mvn test"
+            }
+        }
+      
+        stage('---install---') {
+            steps {
+                bat "mvn install"
+            }
+        }
+
+           stage('---package---') {
+            steps {
+                bat "mvn package "
+            }
+        }
+
+           stage('---sonar---') {
+            steps {
+                bat "mvn sonar:sonar "
+            }
+            
+        }
+
+    
     }
-    stage("test") {
-      steps {
-        echo 'testing the application...'
-      }
-    }
-    stage("deploy") {
-      steps {
-        echo 'deplying the application...'
-      }
-    }
-  }
 }
