@@ -3,7 +3,7 @@ agent any
 stages {
 stage("build") {
 steps {
-echo 'building the application..."
+echo 'building the application...'
 }
 }
 stage("test") {
@@ -13,7 +13,7 @@ echo 'testing the application...'
 }
 stage("deploy") {
 steps {
-echo 'deplying the application..."
+echo 'deplying the application...'
 }
 }
 }
