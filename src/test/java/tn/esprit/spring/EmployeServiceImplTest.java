@@ -36,10 +36,10 @@ public class EmployeServiceImplTest {
 	public void testGetEmployePrenomById() {
 		try {
 			int idE = employeS
-					.ajouterEmploye(new Employe("Mehdy", "benromdhane", "mehdy.benromdhane@spring.tn", true, Role.TECHNICIEN));
+					.ajouterEmploye(new Employe("jihen", "barbouche", "barbouchejihen1@gmail.com", true, Role.TECHNICIEN));
 			String prenomEmp = employeS.getEmployePrenomById(idE);
 			l.info("------> Prenom de lemploye est : " + prenomEmp);
-			assertThat(prenomEmp).isEqualTo("benromdhane");
+			assertThat(prenomEmp).isEqualTo("jihen");
 			employeS.deleteEmployeById(idE);
 		} catch (Exception e) {
 			l.error(String.format("Erreur dans Get EmployePrenom By Id : %s ", e));
