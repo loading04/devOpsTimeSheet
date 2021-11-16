@@ -27,8 +27,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
     @Mock private EmployeRepository employeRepository;
     private EmployeServiceImpl employeService;
 
-    @BeforeEach
-    void setUp() {employeService = new EmployeServiceImpl();}
+    
 
     @Test
     void addEmploye(){
