@@ -37,7 +37,7 @@ pipeline {
     stage('Docker') {
         steps {
             sh 'docker build -t timesheet:v1 .'
-            sh 'docker push yosriksonti/timesheet'
+            sh 'docker push timesheet:v1'
 
         }
     }
